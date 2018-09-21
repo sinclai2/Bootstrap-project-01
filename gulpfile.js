@@ -7,11 +7,11 @@ const autoprefixer = require('gulp-autoprefixer');
 
 // ---------Tasks---------------
 gulp.task('pug', function () {
-  return gulp.src('./src/views/**/*.pug')
+  return gulp.src('./src/views/index.pug')
       .pipe(plumber())
       .pipe(pug({
         doctype: 'html',
-        pretty: false,
+        pretty: true,
       }))
       .pipe(gulp.dest('./build'));
 });
